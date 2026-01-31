@@ -141,7 +141,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
    </div>
    <div class="marquee-container">
-    <a href="https://set2026.ishinfosys.com/SYM20-SET26/apply/Index.aspx" target="_blank">
+    <a class="apply-now-btn" data-open="enquiry-modal" href="javascript:void(0)">
      <div class="marquee-content">
       Notification: Admissions for the Academic Session 2026–27 are now open! Visit the Admissions page for detailed information.
       <span class="marqueeText" style="text-decoration: underline; color: blue;">
@@ -195,7 +195,7 @@ window.addEventListener("pageshow", (event) => {
   <div class="contact-sec" id="enq">
    <div class="container-fluid">
     <div class="row">
-     <div class="col-md-4 left-contact">
+     <div class="col-md-6 left-contact">
       <h3>
        Contact Info
       </h3>
@@ -203,13 +203,14 @@ window.addEventListener("pageshow", (event) => {
        <div class="fl-icon">
         <img alt="Talk to Our Admission Experts at SAII" src="/assets/images/location.svg"/>
        </div>
-       <!--            <div class="fl-text">Symbiosis Artificial Intelligence Institute (SAII साई),-->
-       <!--Symbiosis Institute of Technology,-->
-       <!--Constituent of SYMBIOSIS INTERNATIONAL (DEEMED UNIVERSITY),-->
-       <!--Near Lupin Research Park, Gram: Lavale,-->
-       <!--Tal: Mulshi, Pune 412 115</div>-->
        <div class="fl-text">
-        Symbiosis Artificial Intelligence Institute (SAII साई), Constituent of SYMBIOSIS INTERNATIONAL (DEEMED UNIVERSITY), Near Lupin Research Park, Gram: Lavale, Tal: Mulshi, Pune 412115
+         Dept of AI in Healthcare<br>
+         Kasturba Medical College, Manipal<br>
+         Room No: 18219<br>
+         Ground floor<br>
+         KMC Administrative block<br>
+         KMC, Manipal<br>
+         Madhav Nagar – 576104
        </div>
       </div>
       <div class="fl">
@@ -236,30 +237,13 @@ window.addEventListener("pageshow", (event) => {
         <img alt="Contact the Symbiosis AI Institute" src="/assets/images/email.svg"/>
        </div>
        <div class="fl-text">
-        <a href="mailto:admissions@saii.siu.edu.in">
-         admissions@saii.siu.edu.in
-        </a>
-        <br/>
-        <a href="mailto:director@saii.siu.edu.in">
-         director@saii.siu.edu.in
-        </a>
-        <br/>
-        <a href="mailto:patodirector@saii.siu.edu.in">
-         patodirector@saii.siu.edu.in
-        </a>
-       </div>
+         <a href="mailto:aihealthcare.kmc@manipal.edu">aihealthcare.kmc@manipal.edu</a>
+        </div>
       </div>
      </div>
-     <div class="col-md-4 left-contact">
-      <h3>
-       Connect with Us on WhatsApp
-      </h3>
-      <div class="whp">
-       <img alt="SAII – Contact Information" src="/assets/images/scan.webp"/>
-      </div>
-     </div>
-     <div class="col-md-4">
-      <div class="frm">
+     
+     <div class="col-md-6">
+       <div class="frm">
        <h3>
         ENQUIRE NOW
        </h3>
@@ -289,29 +273,15 @@ window.addEventListener("pageshow", (event) => {
                         <div class="inp-btn">
                             <input type="submit" value="Submit" name="submit_btn" id="submit_btn">
                         </div> -->
-       <iframe id="formIfram" style="height: 470px; width:100%;border: none;">
-       </iframe>
-       <script>
-        var iframe = document.getElementById('formIfram');
-                      let url = encodeURIComponent(window.location.href);
-                      iframe.src = "https://forms.geta.ai/form/fe6wcGqjtxMiuCKLxpRmkn/R2RrcHg2T1JuODdSZnJsZjoxZmM2OGU0MTFiZmQwYWY1ODgyMWRhNmNhNjZhNDY2ODkzMjI5OTNmNGVmZTcyMmY5MzdhZTdiN2Q0OGQyMGE4ODhhMzAyOTY0MjQzMjYxOTNmMzllMjQzOGQ5Yzg2MzA1NTE2ZDdiOWM0OGNkZjQ3ODM2ZDVkMzJhYTgxNmZkOQ==/"+url;
-       </script>
-       <!-- -->
-       <!-- Geta.ai script -->
-       <!--<iframe id="formIfram" style="height: 395px; width: -webkit-fill-available;border: none;"></iframe>-->
-       <!--    <script>-->
-       <!--        var iframe = document.getElementById('formIfram');-->
-       <!--        let url = encodeURIComponent(window.location.href);-->
-       <!--        iframe.src = "https://forms.geta.ai/form/9MkcfmGjacHAKoVEiMW7tk/dnZXZzhGWU5aaU9WRW9EUTplZWY4NjkwODRmY2QxYjZkMDIyMjljZDVlN2ZjNTMxNzNiM2E4Y2E5M2NlMWZmZTI2MGU1OTI5ZTY5MDZiODI0M2RkZWNmMTU5ZWY1N2NmMTJhM2ZlNjY2Y2Q1OThlNTU=/"+url;-->
-       <!--    </script>-->
-       <!-- Geta.ai script -->
+       <!-- Standardized Contact Form Container (Injected via custom.js) -->
+       <div id="contactPageFormContainer"></div>
       </div>
      </div>
     </div>
     <div class="row mt-5">
      <div class="col-md-12">
       <div class="map">
-       <iframe allowfullscreen="" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.7281112073942!2d73.72529292401046!3d18.541184768546614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bc4c00000001%3A0x1897af84a962d30b!2sSymbiosis%20Centre%20for%20Applied%20Artificial%20Intelligence!5e0!3m2!1sen!2sin!4v1744807567551!5m2!1sen!2sin" style="border:0;" width="100%">
+       <iframe allowfullscreen="" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=KMC+Administrative+Block,+Manipal,+Madhav+Nagar+576104&t=&z=16&ie=UTF8&iwloc=&output=embed" style="border:0;" width="100%">
        </iframe>
       </div>
      </div>
@@ -378,24 +348,24 @@ window.addEventListener("pageshow", (event) => {
     </div>
     
     <!-- Preserved Floating Button -->
-    <a class="apply-steps-btn video-hub" href="video-hub.html" target="_blank">
+    <!-- <!-- <!-- <a class="apply-steps-btn video-hub" href="video-hub.html" target="_blank">
       <img alt="Video Icon" src="/assets/images/video-icon-removebg-preview.png"
         style="width:37px; height:auto; margin-bottom:-8px; vertical-align:middle;" />
       What's Next
-    </a>
+    </a> --> --> -->
   </footer>
   <div class="last-footer">
    © 2026 Manipal Academy of Higher Education
   </div>
-  <div class="wht">
+  <!-- <div class="wht">
    <a href="https://wa.me/917030044323?text=Hi%20I%20am%20SAII,%20How%20can%20i%20assist%20you%3F" target="_blank">
     <img alt="About SAII Pune" src="/assets/images/wht.png"/>
    </a>
-  </div>
-  <a class="call-link" href="tel:02269976485">
+  </div> -->
+  <!-- <a class="call-link" href="tel:02269976485">
    <i aria-hidden="true" class="fa fa-phone">
    </i>
-  </a>
+  </a> -->
   <!-- Bootstrap Modal -->
   <!-- Styled Modal -->
   <!--<div class="modal fade" id="piBookingModal" tabindex="-1" aria-labelledby="piBookingModalLabel" aria-hidden="true">-->
@@ -535,7 +505,7 @@ window.addEventListener("pageshow", (event) => {
     <button aria-label="Close popup" class="imgModalClose">
      ×
     </button>
-    <a href="https://set2026.ishinfosys.com/SYM20-SET26/apply/Index.aspx" target="_blank">
+    <a class="apply-now-btn" data-open="enquiry-modal" href="javascript:void(0)">
      <img alt="Popup Banner" src="/assets/images/SAII 800X500 (1).webp"/>
     </a>
    </div>
@@ -1031,7 +1001,7 @@ a.visit-siu-btn.set-btn {
   </script>
   <script src="/assets/js/code.js">
   </script>
-  <script>
+  <!-- <script>
    (function(w, d, s) {
         var f = d.getElementsByTagName(s)[0],
             j = d.createElement(s);
@@ -1044,7 +1014,7 @@ a.visit-siu-btn.set-btn {
         f.parentNode.insertBefore(j, f);
 
     })(window, document, 'script');
-  </script>
+  </script> -->
   <!-- Geta.ai script -->
  </body>
 </html>

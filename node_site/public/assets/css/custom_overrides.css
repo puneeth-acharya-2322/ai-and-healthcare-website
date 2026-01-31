@@ -1,0 +1,11 @@
+/* Neutralize Floating CTAs */
+.call-link,
+.wht,
+.video-hub,
+.apply-steps-btn {
+    display: none !important;
+    pointer-events: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    position: static !important;
+}
