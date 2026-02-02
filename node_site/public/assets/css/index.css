@@ -115,13 +115,10 @@
 }
 
 .aboutSec {
-  display: flex;
-  justify-content: flex-end;
   position: relative;
 }
 
 .aboutAI,
-.aboutContainer,
 .filter {
   position: absolute;
 }
@@ -139,12 +136,15 @@
   left: 0;
   bottom: 0;
   height: 100%;
+  position: absolute;
+  width: 50%;
 }
 
 .aboutContainer {
-  margin: 8rem 0;
-  width: 45%;
-  right: 2.5%;
+  width: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 
 .programSec {
@@ -772,7 +772,8 @@
   }
 
   .bgImgMob {
-    height: 800px;
+    height: auto;
+    min-height: 400px;
   }
 
   .bannerBtns,

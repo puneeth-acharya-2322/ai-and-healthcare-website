@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
+
 header,
 img {
   max-width: 100%;
@@ -150,14 +152,26 @@ footer ul {
   font-display: swap;
 }
 
-body,
+body {
+  font-family: 'Montserrat', 'Open Sans', Arial, sans-serif;
+  color: #222;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
 h4,
-h5,
-p {
+h5 {
   font-family: 'Montserrat', sans-serif;
+}
+
+p,
+li,
+span {
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #555;
 }
 
 .flashing-button {
@@ -1763,68 +1777,302 @@ a.btnLarge {
 .FacultyLink {
   font-size: 24px;
 }
+
 /* =========================================
    Navbar Layout & Hierarchy Fix (Robust)
    ========================================= */
 
 /* Ensure the parent container aligns items side-by-side */
 .top-left {
-    display: flex !important;
-    align-items: center !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 /* Force the lockup container to be a vertical flex column */
 .institute-title-lockup {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    height: 46px !important;
-    /* Fixed height matching logo approx */
-    border-left: 1px solid #ccc !important;
-    margin-left: 15px !important;
-    padding-left: 15px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  height: 46px !important;
+  /* Fixed height matching logo approx */
+  border-left: 1px solid #ccc !important;
+  margin-left: 15px !important;
+  padding-left: 15px !important;
 }
 
 /* Typography Hierarchy - Department Name */
 .dept-name {
-    display: block !important;
-    color: #222 !important;
-    font-weight: 700 !important;
-    font-size: 16px !important;
-    line-height: 1.1 !important;
-    margin-bottom: 3px !important;
-    text-decoration: none !important;
+  display: block !important;
+  color: #222 !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  line-height: 1.1 !important;
+  margin-bottom: 3px !important;
+  text-decoration: none !important;
 }
 
 /* Typography Hierarchy - College Name */
 .college-name {
-    display: block !important;
-    color: #555 !important;
-    font-weight: 500 !important;
-    font-size: 13px !important;
-    line-height: 1.1 !important;
-    text-decoration: none !important;
+  display: block !important;
+  color: #555 !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  line-height: 1.1 !important;
+  text-decoration: none !important;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 575.98px) {
-    .institute-title-lockup {
-        display: none !important;
-    }
+  .institute-title-lockup {
+    display: none !important;
+  }
 }
 
 /* Tablet adjustments (optional scaling) */
 @media (min-width: 576px) and (max-width: 991.98px) {
-    .dept-name {
-        font-size: 14px !important;
-    }
+  .dept-name {
+    font-size: 14px !important;
+  }
 
-    .college-name {
-        font-size: 12px !important;
-    }
+  .college-name {
+    font-size: 12px !important;
+  }
 
-    .institute-title-lockup {
-        margin-left: 10px !important;
-        padding-left: 10px !important;
-    }
+  .institute-title-lockup {
+    margin-left: 10px !important;
+    padding-left: 10px !important;
+  }
+}
+
+/* MAHE Color Theme */
+.btn,
+button,
+.primary-btn {
+  background-color: #E85626;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.btn:hover,
+button:hover,
+.primary-btn:hover {
+  background-color: #C9471E;
+}
+
+/* Sections & Backgrounds */
+section,
+.section {
+  background-color: #fff;
+}
+
+.section-alt {
+  background-color: #F8F9FA;
+}
+
+/* Borders */
+.border,
+.divider,
+hr {
+  border-color: #DDDDDD;
+}
+
+/* ================================
+   Navbar Dropdown Alignment Fix
+   ================================ */
+
+/* Main dropdown alignment */
+.navbar-nav .nav-item.dropdown {
+  position: relative;
+}
+
+.navbar-nav .nav-item.dropdown>.dropdown-menu {
+  left: 0 !important;
+  right: auto !important;
+  transform: none !important;
+  margin-top: 8px;
+  padding: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Dropdown items */
+.navbar-nav .dropdown-item {
+  padding: 10px 18px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+/* ================================
+   Submenu (Research →)
+   ================================ */
+
+.navbar-nav .dropend {
+  position: relative;
+}
+
+.navbar-nav .dropend>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 2px;
+  min-width: 200px;
+  border-radius: 8px;
+}
+
+/* Arrow alignment */
+.navbar-nav .dropend>.dropdown-toggle::after {
+  float: right;
+  margin-top: 6px;
+}
+
+/* Desktop hover behavior */
+@media (min-width: 992px) {
+  .navbar-nav .dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+
+  .navbar-nav .dropend:hover>.dropdown-menu {
+    display: block;
+  }
+}
+
+/* 3D Horizontal Coverflow Carousel (Responsive) */
+.about-coverflow-wrapper {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+  overflow: visible;
+  /* Visual Nudge Up for Desktop */
+  transform: translateY(-50px);
+}
+
+.about-coverflow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coverflow-slide {
+  position: absolute;
+  /* Reduced Rectangle Width to Prevent Overlap */
+  width: 280px;
+  height: 400px;
+  background: #000;
+  border-radius: 15px;
+  /* Sharper corners */
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  opacity: 0;
+}
+
+.coverflow-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Active State (Center) */
+.coverflow-slide.active {
+  transform: translateX(0) scale(1.1) translateZ(50px) rotateY(0deg);
+  opacity: 1;
+  z-index: 20;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Left States (Tighter Offset) */
+.coverflow-slide.left {
+  transform: translateX(-180px) scale(0.85) translateZ(0) rotateY(20deg);
+  opacity: 0.6;
+  z-index: 10;
+}
+
+.coverflow-slide.left-hide {
+  transform: translateX(-320px) scale(0.7) translateZ(-50px) rotateY(30deg);
+  opacity: 0;
+  z-index: 1;
+}
+
+/* Right States (Tighter Offset) */
+.coverflow-slide.right {
+  transform: translateX(180px) scale(0.85) translateZ(0) rotateY(-20deg);
+  opacity: 0.6;
+  z-index: 10;
+}
+
+.coverflow-slide.right-hide {
+  transform: translateX(320px) scale(0.7) translateZ(-50px) rotateY(-30deg);
+  opacity: 0;
+  z-index: 1;
+}
+
+/* Apply Now Button (Inside Slide) */
+.coverflow-slide .apply-now-btn {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #E85626;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 30;
+  white-space: nowrap;
+}
+
+.coverflow-slide.active .apply-now-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.coverflow-slide .apply-now-btn:hover {
+  background: #fff;
+  color: #E85626;
+}
+
+/* Mobile Scaling for Carousel */
+@media (max-width: 991px) {
+  .about-coverflow-wrapper {
+    height: 380px;
+    transform: translateY(0);
+    /* Reset nudge on mobile */
+    margin-top: 20px;
+  }
+
+  .coverflow-slide {
+    width: 260px;
+    /* Wider mobile card */
+    height: 320px;
+  }
+
+  /* Adjust transform values for smaller screens */
+  .coverflow-slide.left {
+    transform: translateX(-160px) scale(0.85) translateZ(0) rotateY(20deg);
+  }
+
+  .coverflow-slide.right {
+    transform: translateX(160px) scale(0.85) translateZ(0) rotateY(-20deg);
+  }
+
+  .coverflow-slide.left-hide {
+    transform: translateX(-260px) scale(0.7) translateZ(-50px) rotateY(30deg);
+  }
+
+  .coverflow-slide.right-hide {
+    transform: translateX(260px) scale(0.7) translateZ(-50px) rotateY(-30deg);
+  }
 }

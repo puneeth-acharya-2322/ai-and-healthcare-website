@@ -97,9 +97,57 @@ $("#cat-1").owlCarousel({
     loop: !0,
     margin: 20,
     nav: !0,
-    dots: !1,
     autoplay: !1,
   });
+
+  // 3D Horizontal Coverflow Logic
+  const cfSlides = document.querySelectorAll('.about-coverflow .coverflow-slide');
+  if (cfSlides.length > 0) {
+    let cfIdx = 2; // Center start (0-4 => 2)
+    const cfCount = cfSlides.length;
+    let cfTimer;
+
+    function renderCoverflow() {
+      cfSlides.forEach((slide, i) => {
+        slide.className = 'coverflow-slide'; // Reset
+        
+        // Calculate wrapped distance from active index
+        let d = (i - cfIdx);
+        while (d <= -3) d += cfCount;
+        while (d > 2) d -= cfCount;
+        
+        // Assign classes based on distance
+        if (d === 0) slide.classList.add('active');
+        else if (d === -1) slide.classList.add('left');
+        else if (d === 1) slide.classList.add('right');
+        else if (d === -2) slide.classList.add('left-hide');
+        else if (d === 2) slide.classList.add('right-hide');
+        // Any other distance (shouldn't happen with 5 items) is hidden by default CSS
+      });
+    }
+
+    function autoCoverflow() {
+      cfIdx = (cfIdx + 1) % cfCount;
+      renderCoverflow();
+    }
+
+    // Init
+    renderCoverflow();
+    
+    // Auto-Play
+    cfTimer = setInterval(autoCoverflow, 3000);
+
+    // Hover Pause
+    const cfContainer = document.querySelector('.about-coverflow-wrapper');
+    if (cfContainer) {
+      cfContainer.addEventListener('mouseenter', () => clearInterval(cfTimer));
+      cfContainer.addEventListener('mouseleave', () => cfTimer = setInterval(autoCoverflow, 3000));
+    }
+  }
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     // UTM Script
